@@ -54,7 +54,7 @@ now="\"${now_year}-${now_month}-${now_day}\""
 # now=$(date "+%Y-%m-%d")
 # now="\"2020-03-02\""
 
-data_compare=$(curl --silent 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol='$ticker'&outputsize=full&apikey=KD4V1YVMGPG21B9G' | jq '.bla')
+data_compare=$(curl --silent 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol='$ticker'&outputsize=full&apikey=' | jq '.bla')
 data=$(curl --silent 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol='$ticker'&outputsize=full&apikey=KD4V1YVMGPG21B9G' | jq '."Time Series (Daily)".'$now'."1. open"')
 # echo $data
 if [ "$data" = "$data_compare" ]
