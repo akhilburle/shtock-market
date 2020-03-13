@@ -8,3 +8,8 @@ Clone the repository and run.
 
 You're done!
 If any libraries are not available when you run the script. Just run brew install {name of dependency}
+
+## Required Dependencies
+html2text 
+
+curl
