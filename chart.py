@@ -6,3 +6,4 @@ url = "https://finance.yahoo.com/chart/" + sys.argv[1]
 driver.get(url)
 driver.save_screenshot('pic.png')
 driver.quit()
+
